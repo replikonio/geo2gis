@@ -58,11 +58,13 @@ export default class GisMap extends Vue {
     onEachFeature: (f: any, l: any) => {
       l.bindPopup(
         '<pre style="height: 100px; overflow: scroll;">' +
-          JSON.stringify(f.properties, null, " ").replace(
-            //eslint-disable-next-line
+          JSON.stringify(f.properties, null, " ")
+            .replace(
+              //eslint-disable-next-line
             /[\{\}"]/g,
-            ""
-          ) +
+              ""
+            )
+            .replaceAll("\\n", "<br/>") +
           "</pre>"
       );
     },

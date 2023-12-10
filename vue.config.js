@@ -2,5 +2,6 @@ module.exports = {
   devServer: {
     port: 3001,
   },
-  publicPath: '/geo2gis/',
+  outputDir: "docs",
+  publicPath: "/geo2gis/",
 };
